@@ -1,0 +1,22 @@
+<div>
+		<img class="slide-image" src="banner.jpg" alt="">
+		<div class ="text"> 
+			<h1>Información de Contacto</h1>
+
+			<p>Si deseas contratar los servicios de la tuna, ya sea para una serenata, cumpleaños, bautizo, matrimonio, etc, no dudes en contactar a estos hidalgos caballeros: </p>
+
+			<div ng-repeat="c in contact" class = "infoBox">
+				
+				<div class = "info"> {{c.name}}</div>
+				<div class = "info">{{c.phone}} </div>
+			</div>
+			<br>
+			<p>Por si te interesa sumarte a nuestras filas, ensayamos {{trainningDays}} en {{trainningLocation}} de {{trainningTime}}, el unico requisito es ser estudiante de la Universidad de Concepcion</p>
+			<h2>Encuentranos en las redes sociales</h2>
+			
+			<div ng-repeat="s in social" >
+				<div class = "social"> <a href="{{s.url}}" alt = "{{s.name}}"> <img src="{{s.image}}" width="50" /></a> </div>		
+			</div>
+		</div>		
+		<div class ="footer" > {{footer}}</div>
+	</div>

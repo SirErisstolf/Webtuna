@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Tuna de la Universidad de Concepcion - Chile Tuna UdeC</title>
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+	<!-- JS -->
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-route/angular-route.min.js"></script>
+
+	<!-- ANGULAR CUSTOM -->
+	<script src="js/controllers/MainCtrl.js"></script>
+	<script src="js/controllers/NerdCtrl.js"></script>
+	<script src="js/services/NerdService.js"></script>
+	<script src="js/controllers/GeekCtrl.js"></script>
+	<script src="js/services/GeekService.js"></script>
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+
+	<script>
+	$('.nav a').on('click', function(){
+	    $('.btn-navbar').click(); //bootstrap 2.x
+	    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+	});
+    </script>
+</head>
+<body ng-app="sampleApp" ng-controller="NerdController">
+<div class="container">
+	
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/~webtuna/#/">Home</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a class="navbar-brand" href="/~webtuna/#/">Home</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/~webtuna/#nosotros">Nosotros</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/~webtuna/#historia">Historia</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/~webtuna/#contacto">Contacto</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/~webtuna/#cancionero">Cancionero</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/~webtuna/#descargas">Descargas</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+
+	<!-- HEADER -->
+	<!--nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/#/">Home</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="/#nosotros">Nosotros</a></li>
+			<li><a href="/#historia">Historia</a></li>
+			<li><a href="/#contacto">Contacto</a></li>
+			<li><a href="/#cancionero">Cancionero</a></li>
+			<li><a href="/#descargas">Descargas</a></li>
+		</ul>
+	</nav-->
+
+
+
+	<!-- ANGULAR DYNAMIC CONTENT -->
+	<div ng-view></div>
+
+</div>
+</body>
+</html>

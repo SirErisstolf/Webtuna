@@ -1,0 +1,12 @@
+	<div>
+		<img class="slide-image" src="banner.jpg" alt="">
+		<div class ="text"> 
+			<h1>Descargas</h1>
+			<ul>
+				<div ng-repeat="item in downloads" >
+					<li><a href="{{item.url}}">{{item.name}}</a></li>
+				</div>
+			</ul>			
+		</div>		
+		<div class ="footer"> {{footer}}</div>
+	</div>

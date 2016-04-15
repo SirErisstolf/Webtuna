@@ -1,0 +1,17 @@
+
+	<div>
+	 <img class="slide-image" src="banner.jpg" alt="">
+	  	<!--div ng-repeat="m in menu" class = "menu-item"><a href="{{m.url}}" > {{m.name}}</a></div-->
+	  	<div class ="text">
+			<div ng-repeat="n in news" class = "news">
+				<div class = "news-tittle">{{n.tittle}}</div>
+				<div class = "news-text">{{n.textTop}}</div> 
+				<div my-youtube code="n.embedCode" class = "youtube"></div>
+				<div class = "news-text">{{n.textBottom}}</div> 
+				<div class = "news-info">on {{n.date}}</div>
+				<div class = "news-info">Created by  {{n.author}}</div>
+				<div class = "news-info"><a href="{{n.refLinkUrl}}">{{n.refLinkDisplay}}</a></div>
+			</div>
+		</div>
+	    <div class ="footer" > {{footer}}</div>
+    </div>
